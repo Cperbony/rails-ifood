@@ -7,6 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   config.active_storage.service = :local
+"#{  config.default_url_options = { host: "localhost:3000" }}"
   Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 
 
