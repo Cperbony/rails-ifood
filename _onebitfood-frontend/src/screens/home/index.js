@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Column, Button, Icon, Title } from "rbx";
 import { FaCrosshairs } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
