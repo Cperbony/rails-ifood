@@ -1,4 +1,4 @@
-import { LOAD_RESTAURANTS} from "../actions/action_types";
+import { LOAD_RESTAURANTS } from "../actions/action_types";
 
 export default (state = { restaurants: [] }, action) => {
     switch(action.type) {
