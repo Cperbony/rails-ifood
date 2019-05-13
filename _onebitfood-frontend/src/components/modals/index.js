@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import addressModal from './address'
+import addressModal from './address';
+import addProductModal from './add_product';
 
 class ModalRoot extends Component {
 
     render() {
         const modal_components = {
-            'ADDRESS_MODAL': addressModal
+            'ADDRESS_MODAL': addressModal,
+            'ADD_PRODUCT': addProductModal
         }
 
         if (!this.props.modal.modalType) {
