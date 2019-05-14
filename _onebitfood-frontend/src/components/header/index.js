@@ -7,13 +7,13 @@ import { Navbar, Container, Icon } from 'rbx';
 import LogoImage from '../../assets/images/logo-v1-horizontal.png';
 import SearchBox from '../search_box_component';
 import { showModal } from "../../actions/modal";
-import { FaCrosshairs } from 'react-icons/fa';
+import { FaCrosshairs, FaShoppingBasket } from 'react-icons/fa';
 
 
 import "../../styles/header.scss";
 
 const Header = (props) => (
-    <div class="top-navbar">
+    <div className="top-navbar">
         <Container>
             <Navbar>
                 <Navbar.Brand>
@@ -21,7 +21,7 @@ const Header = (props) => (
                 </Navbar.Brand>
 
                 <Navbar.Menu>
-                    <Navbar.Segment as="div" class="navbar-item navbar-center">
+                    <Navbar.Segment as="div" align="start" className="navbar-item navbar-center">
                         <SearchBox />
                     </Navbar.Segment>
                     <Navbar.Segment as="div" align="end">
@@ -30,6 +30,12 @@ const Header = (props) => (
                                 <FaCrosshairs />
                             </Icon>
                             <p>Endereço</p>
+                        </Navbar.Item>
+                        <Navbar.Item onClick={() => props.showModal('ORDER_MODAL')}>
+                            <Icon color="has-custom-black" >
+                                <FaShoppingBasket />
+                            </Icon>
+                            <p>Sacola</p>
                         </Navbar.Item>
                     </Navbar.Segment>
                 </Navbar.Menu>
