@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    render json: @restaurants, product_categories: true
+    render json: @restaurant, product_categories: true
   end
 
   def search
@@ -21,13 +21,14 @@ class RestaurantsController < ApplicationController
 
   private
 
-  def set_restaurant
-    @restaurant = Restaurant.find_by(id: params[:id])
-  end
-
   def filter_by_category
     @restaurants = @restaurants.select do |r|
       r.category.title == params[:category]
     end
   end
+
+  def set_restaurant
+    @restaurant = Restaurant.find_by(id: params[:id])
+  end
+
 end
